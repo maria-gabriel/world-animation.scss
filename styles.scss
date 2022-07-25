@@ -1,0 +1,366 @@
+html {
+  --sec: 25s;
+}
+
+.mibody {
+  height: 550px;
+  width: 100%;
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 360px) {
+  .mibody {
+    transform: scale(0.4);
+  }
+}
+@media only screen and (max-width: 540px) and (min-width: 360px) {
+  .mibody {
+    transform: scale(0.6);
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 540px) {
+  .mibody {
+    transform: scale(0.7);
+  }
+}
+
+.principal {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+.principal > * {
+  position: absolute;
+}
+.pantalla {
+  width: 270px;
+  height: 270px;
+  display: table-cell;
+  background: #15161890;
+  border: 25px solid transparent;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  top: -29%;
+  left: -4%;
+}
+.pantalla::after {
+  content: attr(title);
+  color: #fff;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 25px;
+  position: absolute;
+  left: 0px;
+}
+.micircle {
+  z-index: 1;
+  width: 65px;
+  height: 65px;
+  line-height: 65px;
+  border-radius: 50%;
+  font-size: 12px;
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  visibility: hidden;
+  background: #8a8b8c20;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.micircle2 {
+  width: 65px;
+  height: 65px;
+  line-height: 65px;
+  font-size: 12px;
+  position: absolute;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0.9;
+  white-space: nowrap;
+}
+.micircle:hover {
+  background: #ff0036;
+}
+.micircle:hover .roti {
+  filter: brightness(1);
+}
+.roti {
+  filter: brightness(0);
+}
+.diametro {
+  position: absolute;
+  left: -35%;
+  top: 12%;
+}
+
+@keyframes preloader1 {
+  0% {
+    visibility: visible;
+    transform: rotateZ(-360deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotateZ(-0deg);
+  }
+}
+@keyframes preloader2 {
+  0% {
+    visibility: visible;
+    transform: rotateZ(288deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotateZ(-72deg);
+  }
+}
+@keyframes preloader3 {
+  0% {
+    visibility: visible;
+    transform: rotateZ(216deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotateZ(-144deg);
+  }
+}
+
+@keyframes preloader4 {
+  0% {
+    visibility: visible;
+    transform: rotateZ(144deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotateZ(-218deg);
+  }
+}
+@keyframes preloader5 {
+  0% {
+    visibility: visible;
+    transform: rotateZ(72deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotateZ(-288deg);
+  }
+}
+
+@keyframes girar1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes girar2 {
+  0% {
+    transform: rotate(72deg);
+  }
+  100% {
+    transform: rotate(-288deg);
+  }
+}
+@keyframes girar3 {
+  0% {
+    transform: rotate(144deg);
+  }
+  100% {
+    transform: rotate(-216deg);
+  }
+}
+@keyframes girar4 {
+  0% {
+    transform: rotate(218deg);
+  }
+  100% {
+    transform: rotate(-144deg);
+  }
+}
+@keyframes girar5 {
+  0% {
+    transform: rotate(288deg);
+  }
+  100% {
+    transform: rotate(-72deg);
+  }
+}
+
+.rot {
+  transform-origin: 390%;
+}
+
+.rot:nth-of-type(1) {
+  animation: preloader1 var(--sec) linear infinite;
+}
+.rot:nth-of-type(1) img {
+  content: url('https://www.xborder.co/wp-content/uploads/2021/11/icons8-shipment-logistic-501.png');
+  padding: 10px;
+  animation: girar1 var(--sec) linear infinite;
+}
+.rot:nth-of-type(1) .text {
+  animation: girar1 var(--sec) linear infinite;
+}
+
+.rot:nth-of-type(2) {
+  animation: preloader2 var(--sec) linear infinite reverse;
+}
+.rot:nth-of-type(2) img {
+  content: url('https://www.xborder.co/wp-content/uploads/2021/11/icons8-around-the-globe-501.png');
+  padding: 10px;
+  animation: girar2 var(--sec) linear infinite;
+}
+.rot:nth-of-type(2) .text {
+  animation: girar2 var(--sec) linear infinite;
+}
+
+.rot:nth-of-type(3) {
+  animation: preloader3 var(--sec) linear infinite reverse;
+}
+.rot:nth-of-type(3) img {
+  content: url('https://www.xborder.co/wp-content/uploads/2021/11/icons8-box-settings-50.png');
+  padding: 10px;
+  animation: girar3 var(--sec) linear infinite;
+}
+.rot:nth-of-type(3) .text {
+  animation: girar3 var(--sec) linear infinite;
+}
+
+.rot:nth-of-type(4) {
+  animation: preloader4 var(--sec) linear infinite reverse;
+}
+.rot:nth-of-type(4) img {
+  content: url('https://www.xborder.co/wp-content/uploads/2021/11/icons8-commercial-50.png');
+  padding: 10px;
+  animation: girar4 var(--sec) linear infinite;
+}
+.rot:nth-of-type(4) .text {
+  animation: girar4 var(--sec) linear infinite;
+}
+
+.rot:nth-of-type(5) {
+  animation: preloader5 var(--sec) linear infinite reverse;
+}
+.rot:nth-of-type(5) img {
+  content: url('https://www.xborder.co/wp-content/uploads/2021/11/icons8-qr-code-501.png');
+  padding: 10px;
+  animation: girar5 var(--sec) linear infinite;
+}
+.rot:nth-of-type(5) .text {
+  animation: girar5 var(--sec) linear infinite;
+}
+
+.span {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background-image: url(https://www.xborder.co/wp-content/uploads/2021/12/mapa_transp-1-1.png);
+  opacity: 0.9;
+  background-color: transparent;
+  background-size: cover;
+  box-shadow: -8px -8px 20px #000014 inset, 4px 4px 20px #333;
+  animation: rotatew 20s linear infinite;
+  transform: scale(1);
+  position: absolute;
+  border-radius: 50%;
+  top: -29%;
+  left: -4%;
+}
+@keyframes rotatew {
+  0% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: -96%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 40%;
+  }
+  50% {
+    background-position: 70% 40%;
+  }
+  100% {
+    background-position: 0% 40%;
+  }
+}
+
+.pw {
+  width: 17%;
+  height: 17%;
+  background-image: url('https://www.xborder.co/wp-content/uploads/2021/12/icons8-airplane-mode-on-24.png');
+  background-size: cover;
+  position: absolute;
+}
+
+.plane1 {
+  transform: scale(0.4) rotate(60deg);
+  left: -4%;
+  top: -2%;
+  opacity: 0;
+  animation: volar1 20s linear 7s infinite;
+}
+@keyframes volar1 {
+  0% {
+    left: -7%;
+    top: -1%;
+    opacity: 1;
+  }
+  26% {
+    left: 75%;
+    top: 35%;
+    opacity: 1;
+  }
+
+  27%,
+  100% {
+    left: 75%;
+    top: 35%;
+    opacity: 0;
+  }
+}
+
+.plane2 {
+  transform: scale(0.4) rotate(170deg);
+  left: 70%;
+  top: -12%;
+  animation: volar2 20s linear infinite;
+}
+@keyframes volar2 {
+  0% {
+    left: 45%;
+    top: -2%;
+    opacity: 1;
+  }
+  62% {
+    left: 56%;
+    top: 18%;
+    opacity: 1;
+  }
+
+  63%,
+  100% {
+    left: 57%;
+    top: 18%;
+    opacity: 0;
+  }
+}
+
+.img-1 {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  position: absolute;
+  top: -29%;
+  left: -4%;
+  opacity: 0.9;
+  background-size: 400% 400%;
+  background-image: linear-gradient(-45deg, #f90434, #ff0036, #8d0521, #151618);
+  animation: gradient 12s ease infinite alternate;
+}
